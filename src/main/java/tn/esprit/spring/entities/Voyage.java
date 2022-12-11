@@ -29,7 +29,7 @@ public class Voyage  implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idVoyage;
-	
+	//commentaire
 
 	long codeVoyage;
 	
