@@ -37,6 +37,30 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+	<groupId>junit</groupId>
+	<artifactId>junit</artifactId>
+	<scope>test</scope>
+	</dependency>
+	<dependency>
+	<groupId>org.junit.jupiter</groupId>
+	<artifactId>junit-jupiter-api</artifactId>
+	<scope>test</scope>
+	</dependency>
+	<dependency>
+	<groupId>org.junit.jupiter</groupId>
+	<artifactId>junit-jupiter-engine</artifactId>
+	<scope>test</scope>
+	</dependency>
+	<dependency>
+	<groupId>org.junit.platform</groupId>
+	<artifactId>junit-platform-launcher</artifactId>
+	<scope>test</scope>
+	</dependency>
+	<dependency>
+	<groupId>org.mockito</groupId>
+	<artifactId>mockito-core</artifactId>
+	</dependency>
 	</dependencies>
 
 <!--  Deploy to Nexus -->
@@ -60,6 +84,31 @@
         <artifactId>maven-resources-plugin</artifactId>
         <version>3.1.0</version>
       </plugin>
+      <plugin>
+	
+	<groupId>org.jacoco</groupId>
+	<artifactId>jacoco-maven-plugin</artifactId>
+	<version>0.8.7</version>
+	<executions>
+	<execution>
+	<id>prepare-agent</id>
+	<goals>
+	<goal>prepare-agent</goal>
+	</goals>
+	</execution>
+	<execution>
+	<id>report</id>
+	<goals>
+	<goal>report</goal>
+	</goals>
+	<configuration>
+	<formats>
+	<format>XML</format>
+	</formats>
+	</configuration>
+	</execution>
+	</executions>
+	</plugin>
       		</plugins>
 	</build>
 
