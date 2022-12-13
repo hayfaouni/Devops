@@ -11,7 +11,7 @@ services:
     restart : on-failure
     
   achatproject:
-    image: hayfaouni/devops
+    image: hayfaouni/examthouraya
     ports:
       - 8089:8089
     restart: unless-stopped
