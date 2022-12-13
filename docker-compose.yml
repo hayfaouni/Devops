@@ -8,7 +8,9 @@ services:
       
     ports:
       - 3306:3306
-    restart : on-failure
+    volumes:
+    - db:var/lib/mysql
+    restart :  unless-stopped
     
   devopsproject:
     image: hayfaouni/examthouraya
