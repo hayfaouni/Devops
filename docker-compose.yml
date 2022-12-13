@@ -1,16 +1,16 @@
 version: "3"
 services:
   mysql-standalone:
-    image: mysql:latest
+    image: mysql:8
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
       - MYSQL_DATABASE=hayfa
-      - MYSQL_PASSWORD=
+      
     ports:
       - 3306:3306
     restart : on-failure
     
-  achatproject:
+  devopsproject:
     image: hayfaouni/examthouraya
     ports:
       - 8089:8089
